@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Meus Sites Armazenados</h1>
+    </div>
+    <div class="container">
+        <form id="siteForm" class="site-form">
+            <label for="siteName">Nome do Site:</label>
+            <input type="text" id="siteName" name="siteName" class="input-field" required><br>
+
+            <label for="siteURL">Endereço do Site:</label>
+            <input type="url" id="siteURL" name="siteURL" class="input-field" value="http://192.168.1.70/" required><br>
+
+            <label for="siteDescription">Descrição do Site:</label><br>
+            <textarea id="siteDescription" name="siteDescription" class="input-field" rows="4" cols="50" required></textarea><br>
+
+            <button type="button" onclick="cadastrarSite()" class="submit-button">Cadastrar Site</button>
+        </form>
+        <div class="sites-container">
+            <h2>Sites Armazenados:</h2>
+            <div class="sites-list" id="sitesList"></div>
+        </div>
+    </div>
+	
+    <script src="script.js"></script>
+</body>
+
+</html>
